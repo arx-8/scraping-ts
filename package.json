@@ -8,9 +8,35 @@
     "yarn": "^1"
   },
   "scripts": {
-    "dev": "vite-node --watch src/index.ts"
+    "dev": "vite-node --watch src/index.ts",
+    "eslint-print-config": "eslint --print-config src/index.ts > misc/eslint-print-config.json",
+    "lint-dry:eslint": "eslint -c .eslintrc.js --max-warnings=0 .",
+    "lint-dry:format": "prettier --check .",
+    "lint-dry": "npm-run-all --parallel --continue-on-error lint-dry:* lint:tsc",
+    "lint:eslint": "eslint -c .eslintrc.js --fix .",
+    "lint:format": "prettier --write .",
+    "lint:tsc": "tsc --noEmit",
+    "lint": "npm-run-all --parallel --continue-on-error lint:*"
   },
   "optionalDependencies": {
     "vite-node": "0.10.0"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.31",
+    "@typescript-eslint/eslint-plugin": "5.21.0",
+    "@typescript-eslint/parser": "5.21.0",
+    "eslint": "8.14.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-config-standard": "17.0.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-n": "15.2.0",
+    "eslint-plugin-promise": "6.0.0",
+    "eslint-plugin-sort-destructure-keys": "1.4.0",
+    "eslint-plugin-sort-keys-fix": "1.1.2",
+    "eslint-plugin-typescript-sort-keys": "2.1.0",
+    "npm-run-all": "4.1.5",
+    "prettier": "2.6.2",
+    "prettier-plugin-organize-imports": "2.3.4",
+    "typescript": "4.6.4"
   }
 }
