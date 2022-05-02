@@ -6,5 +6,11 @@
     "node": "^16",
     "npm": "0",
     "yarn": "^1"
+  },
+  "scripts": {
+    "dev": "vite-node --watch src/index.ts"
+  },
+  "optionalDependencies": {
+    "vite-node": "0.10.0"
   }
 }
