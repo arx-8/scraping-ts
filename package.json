@@ -1,5 +1,10 @@
 {
   "name": "scraping-ts",
   "private": true,
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": "^16",
+    "npm": "0",
+    "yarn": "^1"
+  }
 }
