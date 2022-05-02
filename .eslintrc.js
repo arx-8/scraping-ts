@@ -30,6 +30,10 @@ const config = {
         "@typescript-eslint/explicit-module-boundary-types": 2,
       },
     },
+    {
+      extends: ["plugin:jest/all"],
+      files: ["*.test.ts", "*.test.tsx"],
+    },
   ],
   parserOptions: {
     project: "./tsconfig.json",

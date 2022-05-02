@@ -16,7 +16,8 @@
     "lint:eslint": "eslint -c .eslintrc.js --fix .",
     "lint:format": "prettier --write .",
     "lint:tsc": "tsc --noEmit",
-    "lint": "npm-run-all --parallel --continue-on-error lint:*"
+    "lint": "npm-run-all --parallel --continue-on-error lint:*",
+    "test": "vitest"
   },
   "optionalDependencies": {
     "vite-node": "0.10.0"
@@ -29,14 +30,17 @@
     "eslint-config-prettier": "8.5.0",
     "eslint-config-standard": "17.0.0",
     "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-jest": "26.1.5",
     "eslint-plugin-n": "15.2.0",
     "eslint-plugin-promise": "6.0.0",
     "eslint-plugin-sort-destructure-keys": "1.4.0",
     "eslint-plugin-sort-keys-fix": "1.1.2",
     "eslint-plugin-typescript-sort-keys": "2.1.0",
+    "jest": "28.0.3",
     "npm-run-all": "4.1.5",
     "prettier": "2.6.2",
     "prettier-plugin-organize-imports": "2.3.4",
-    "typescript": "4.6.4"
+    "typescript": "4.6.4",
+    "vitest": "0.10.0"
   }
 }
