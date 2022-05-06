@@ -1,21 +1,25 @@
-import puppeteer from "puppeteer-core"
+import { run } from "src/db"
 
-const browser = await puppeteer.launch({
-  channel: "chrome",
-  headless: false,
-  slowMo: 100,
-})
-const page = await browser.newPage()
-await page.goto("https://www.google.com/")
+run()
 
-await page.type(`body div form input`, "hello")
-await page.keyboard.press("Enter")
-await page.client().send("Input.synthesizeScrollGesture", {
-  repeatCount: 3,
-  repeatDelayMs: 1000,
-  x: 0,
-  y: 0,
-  yDistance: -500,
-})
+// import puppeteer from "puppeteer-core"
 
-await page.close()
+// const browser = await puppeteer.launch({
+//   channel: "chrome",
+//   headless: false,
+//   slowMo: 100,
+// })
+// const page = await browser.newPage()
+// await page.goto("https://www.google.com/")
+
+// await page.type(`body div form input`, "hello")
+// await page.keyboard.press("Enter")
+// await page.client().send("Input.synthesizeScrollGesture", {
+//   repeatCount: 3,
+//   repeatDelayMs: 1000,
+//   x: 0,
+//   y: 0,
+//   yDistance: -500,
+// })
+
+// await page.close()
